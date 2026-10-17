@@ -21,5 +21,15 @@ else:
         invalid = False
 
         while guess_count < max_guesses and not won and not invalid:
-            guess_num = input(f"Guess {guess_count + 1} of {max_num}")
+            guess_num = input(f"Guess {guess_count + 1} of {max_guesses}:").strip()
 
+            if not guess_num.isdigit():
+                print("Invalid Input.")
+                invalid = True
+            else:
+                guess = int(guess_num)
+                guess_count += 1
+                total += guess
+
+                
+            
