@@ -31,5 +31,11 @@ else:
                 guess_count += 1
                 total += guess
 
-                
-            
+                if guess > secret_num:
+                    print("Too high.")
+                elif guess < secret_num:
+                    print("Too low.")
+                else: 
+                    print(f"Correct! Guesses used: {average:.2f}")
+        if not won and not invalid:
+            print(f"Out of guesses. The number was {secret_num}")
